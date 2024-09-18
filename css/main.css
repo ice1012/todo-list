@@ -1,97 +1,143 @@
-html, body {
-  min-height: 100vh;
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Основные стили для тела страницы */
 body {
-  background-color: #E4E5E7;
-  padding-top: 30px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Светло-серый фон */
+}
+
+/*NAVBAR*/
+
+nav {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+/* Основные стили для навигационной панели */
+.my-navbar {
+  background-color: #E4E5E7; /* Ваш фон страницы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.nav-link {
+  color: #6c757d; /* Серый цвет текста ссылок */
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Синий цвет при наведении */
+}
+
+.nav-link.active {
+  color: #007bff !important; /* Активная ссылка с синим цветом */
+  font-weight: 600;
+}
+
+
+/*CONTENT*/
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Заголовки */
+.display-4 {
+  font-size: 2.5rem;
+  color: #343a40; /* Темный цвет для контраста */
+}
+
+.h4 {
+  font-size: 1.5rem;
+  color: #6c757d; /* Серый цвет для подзаголовка */
+}
+
+/* Стили для списка задач */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление тени */
+}
+
+.list-group-item {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-}
-.aside {
-  height: 400px;
-}
-.main {
-  height: 400px;
-}
-.d-flex {
-  display: flex;
-}
-.task-title {
-  font-weight: 400;
-  padding-top: 5px;
-}
-.gray {
-  color: #BDBDBD;
-}
-.task-title--done {
-  text-decoration: line-through;
-  color: #CDCDCD;
-}
-.task-item__buttons {
-  display: flex;
-  column-gap: 5px;
-}
-.notify-holder {
-  height: 60px;
-  margin-bottom: 20px;
-}
-.empty-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #dee2e6;
 }
+
+.empty-list {
+  text-align: center;
+  color: #6c757d; /* Серый текст */
+}
+
 .empty-list__title {
-  font-size: 28px;
-  margin-bottom: 15px;
-  font-weight: 300;
-}
-.empty-list__icon {
-  color: #42BE2A;
-  font-size: 32px;
-}
-.btn-action {
-    background-color: #e0e5ea;
-    padding: 8px 10px;
-    cursor: pointer;
-    border: 0;
-    border-radius: 4px;
-    transition: opacity 0.2s ease-in;
-    opacity: 0.5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-action:hover {
-    background-color: #e0e5ea;
-    opacity: 1;
-}
-
-.btn-action img {
-  pointer-events: none;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 .none {
-  display: none !important;
+  display: none; /* Скрыть элемент */
 }
 
-.float-right {
-  float: right;
+/* Стили для формы */
+.card-header {
+  font-weight: bold;
+  background-color: #007bff; /* Синий фон заголовка */
+  color: white;
 }
-.copyright {
-  margin-top: 40px;
-  font-size: 14px;
-  color: gray;
-  text-align: center;
-  margin-bottom: 30px;
-  /* position: absolute; */
-  /* bottom: 30px; */
-  /* left: 0; */
-  /* right: 0; */
+
+.card-body {
+  background-color: #e9ecef; /* Светлый фон тела карточки */
+}
+
+.form-control {
+  border-radius: 0.3rem;
+  border: 2px solid #007bff;
+}
+
+.form-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+/* Кнопки */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-action img {
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.btn-action img:hover {
+  opacity: 1;
+}
+
+/* Завершенные задачи */
+.task-title--done {
+  text-decoration: line-through;
+  color: #28a745; /* Зеленый цвет текста */
 }

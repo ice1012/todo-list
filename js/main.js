@@ -3,6 +3,20 @@ const taskInput = document.querySelector('#taskInput');
 const tasksList = document.querySelector('#tasksList');
 const emptyList = document.querySelector('#emptyList');
 
+// константы для навигационной панели
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+const currentPage = window.location.pathname.split("/").pop();
+
+// Проходим по каждой ссылке и проверяем, совпадает ли href с текущим URL
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute('href').split("/").pop(); 
+  if (linkPage === currentPage) {
+    link.classList.add('active'); // Добавляем класс 'active' к текущей странице
+  }
+});
+
+
+
 form.addEventListener('submit', addTask); //Добавление задачи
 
 tasksList.addEventListener('click', deleteTask); //Удаление задачи
